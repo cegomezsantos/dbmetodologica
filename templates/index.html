@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Selecciona un Curso</title>
+    <meta charset="utf-8">
+    <title>Inicio</title>
 </head>
 <body>
-    <h1>Elige un Curso</h1>
-    
-    <form action="#" method="post">
-        <label for="curso">Selecciona un curso:</label>
-        <select id="curso" name="curso">
-            {% for curso in cursos %}
-                <option value="{{ curso }}">{{ curso }}</option>
-            {% endfor %}
-        </select>
-        <button type="submit">Enviar</button>
-    </form>
+    <h1>Página de Inicio</h1>
+    <p>Selecciona qué deseas ver:</p>
+    <ul>
+        <li><a href="/mostrar/general">Mostrar _general.csv</a></li>
+        <li><a href="/mostrar/unidades">Mostrar _Unidades.csv</a></li>
+        <li><a href="/mostrar/contenidos">Mostrar _contenidos.csv</a></li>
+        <li><a href="/mostrar/cursos">Mostrar _CURSOS_argos.csv</a></li>
+        <li><a href="/consulta">Hacer una consulta combinada</a></li>
+    </ul>
 </body>
 </html>

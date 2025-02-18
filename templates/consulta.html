@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mostrando {{ titulo }}</title>
+</head>
+<body>
+  <h1>Datos de {{ titulo }}</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        {% for col in columnas %}
+          <th>{{ col }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for fila in registros %}
+        <tr>
+          {% for col in columnas %}
+            <td>{{ fila[col] }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p><a href="/">Volver al inicio</a></p>
+</body>
+</html>
